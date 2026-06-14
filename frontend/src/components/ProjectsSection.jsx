@@ -5,16 +5,16 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 export const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(" https://threed-portfolio-m6fp.onrender.com")
-      .then((response) => {
-        setProjects(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching projects:", error);
-      });
-  }, []);
+ useEffect(() => {
+  axios
+    .get("https://threed-portfolio-m6fp.onrender.com/api/projects")
+    .then((response) => {
+      setProjects(response.data);
+    })
+    .catch((error) => {
+      console.error("Error fetching projects:", error);
+    });
+}, []);
 
   return (
     <section id="projects" className="py-24 px-4 relative">
