@@ -7,7 +7,7 @@ export const ProjectsSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/projects")
+      .get(" https://threed-portfolio-m6fp.onrender.com")
       .then((response) => {
         setProjects(response.data);
       })
